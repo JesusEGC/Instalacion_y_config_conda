@@ -1,0 +1,34 @@
+#Descargar Miniconda desde consola
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+#Dar permisos de ejcución al instalador
+chmod +x nombre_del_instalador
+
+#Ejecutar el instalador
+./nombre del instalador
+
+#Agregar canales de bioconda al gestor conda
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+
+#Listar los ambientes con los que cuentas
+conda env list 
+
+#Crear un nuevo ambiente
+conda create -n nombre_del_Entorno_nuevo
+
+#Activar o desactivar ambientes
+conda activate nombre_del_Entorno_a_activar
+conda deactivate nombre_del_Entorno_a_desactivar
+
+#Instalar paquetes (asegurate de estar en el ambiente que tu desees)
+conda install nombre_del_programa_a_instalar
+
+#Puedes acelerar un poco la descarga si específicas el canal
+conda install bioconda::nombre_del_programa_a_instalar
+
+#En cualquiera de los dos métodos anteriores puedes específicar la versión del programa que deseas instalar:
+conda install nombre_del_programa_a_instalar=version
+conda install bioconda::nombre_del_programa_a_instalar=version
+
